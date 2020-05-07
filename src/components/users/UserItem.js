@@ -8,7 +8,7 @@ class UserItem extends Component {
         html_url: 'https://github.com/mojombo'
     }
     render() {
-        const {login, avatar_url, html_url} = this.state; //Destructuring
+        const {login, avatar_url, html_url} = this.props.user; //Destructuring
         return (
             <div className='card text-center'>
                 <img src={avatar_url} alt='Not found' className='round-img' style={{width: '60px'}}></img>
