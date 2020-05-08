@@ -3,16 +3,17 @@ import React, {Component} from 'react';
 class Search extends Component {
     state = {
         text: ''
-    }
+    };
 
     onChange = (event) => {
         this.setState({[event.target.name]: event.target.value})
-    }
+    };
 
     onSubmit = (event) => {
+        event.preventDefault(); //Not to self: Find out why i really need this
         this.props.searchUsers(this.state.text);
         this.setState({text: ''})
-    }
+    };
 
     render() {
         return (
